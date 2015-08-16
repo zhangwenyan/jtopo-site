@@ -54,6 +54,7 @@
 			scene.mouseup(function(e){
 				if(e.button == 2){
 					scene.remove(link);
+					beginNode = null;
 					return;
 				}
 				if(e.target != null && e.target instanceof JTopo.Node){
@@ -73,6 +74,7 @@
 					}
 				}else{
 					scene.remove(link);
+					beginNode = null;
 				}
 			});
 			
@@ -126,7 +128,8 @@
 			</ul>
 		  </div>
 		  <div class="right">
-				<div id="content">					<canvas width="850" height="550" id="canvas"></canvas>	
+				<div id="content">
+					<canvas width="850" height="550" id="canvas"></canvas>	
 					
 				</div>
 		  </div>
